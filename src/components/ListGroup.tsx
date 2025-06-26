@@ -5,6 +5,13 @@ function ListGroup() {
     let items = ['New York', 'Karachi', 'Islamabad', 'Daharki', 'Lahore']
     const [selectedItem, setSelectedItem] = useState(-1)
 
+    const [selectedFlag, setSelectedFlag] = useState(false);
+    function setFlag() {
+        setSelectedFlag(true);
+        console.log(selectedFlag)
+        return true;
+    }
+
     return <>
         {items.length === 0 && <h1>No items found</h1>}
         <ul className="list-group">
@@ -12,7 +19,7 @@ function ListGroup() {
                 <li
                     key={item}
                     className={selectedItem === index ? "list-group-item active" : "list-group-item"}
-                    onClick={() => { setSelectedItem(index) }} >{item}
+                    onClick={() => { setFlag() }} >{item}
                 </li>
             )}
         </ul></>
