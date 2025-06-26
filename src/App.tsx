@@ -1,7 +1,8 @@
 import ListGroup from './components/ListGroup'
+import Form from './components/Form'
 
 function App() {
-  return <><ListGroup /></>
+  return <><Form /></>
 }
 
 export default App;
